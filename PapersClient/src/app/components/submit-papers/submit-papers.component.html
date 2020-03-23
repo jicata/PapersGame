@@ -1,0 +1,28 @@
+<div>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <div>
+            <label>First paper:</label>
+            <input type="text" [style.border-color]="getBackgroundColor()" formControlName="paperOne">
+        </div>
+        <p>
+            <label>Second paper:</label>
+            <input type="text" [style.border-color]="getBackgroundColor()" formControlName="paperTwo">
+        </p>
+        <p>
+            <label>Thirds paper:</label>
+            <input type="text" [style.border-color]="getBackgroundColor()" formControlName="paperThree">
+        </p>
+        <p>
+            <label>Fourth paper:</label>
+            <input type="text" [style.border-color]="getBackgroundColor()" formControlName="paperFour">
+        </p>
+        <p>
+            <label>Fifth paper:</label>
+            <input type="text" [style.border-color]="getBackgroundColor()" formControlName="paperFive">
+        </p>
+        <div *ngIf="submitted && form.invalid">
+            <p> {{ errorMessage }} </p>
+        </div>
+        <button type="submit">Da ne izliza</button>
+    </form>
+</div>

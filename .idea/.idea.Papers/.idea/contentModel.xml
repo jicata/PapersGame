@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\User\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\User\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Papers.744570960.00" t="ExcludeRecursive" />
+    <e p="D:\Papers" t="IncludeRecursive">
+      <e p="appsettings.Development.json" t="Include" />
+      <e p="appsettings.json" t="Include" />
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="Controllers" t="Include">
+        <e p="PapersController.cs" t="Include" />
+      </e>
+      <e p="Data" t="Include">
+        <e p="PapersDbContext.cs" t="Include" />
+      </e>
+      <e p="migrations" t="Include">
+        <e p="20200321163933_initial.cs" t="Include" />
+        <e p="20200321163933_initial.Designer.cs" t="Include" />
+        <e p="PapersDbContextModelSnapshot.cs" t="Include" />
+      </e>
+      <e p="Models" t="Include">
+        <e p="Paper.cs" t="Include" />
+      </e>
+      <e p="obj" t="ExcludeRecursive">
+        <e p="Debug" t="Include">
+          <e p="netcoreapp3.0" t="Include">
+            <e p="Papers.AssemblyInfo.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Papers.csproj" t="IncludeRecursive" />
+      <e p="Papers.sln" t="IncludeFlat" />
+      <e p="PapersClient\node_modules\@angular\animations" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\@angular\cli" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\@angular\common" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\@angular\compiler" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\@angular\compiler-cli" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\@angular\core" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\@angular\forms" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\@angular\platform-browser" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\@angular\platform-browser-dynamic" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\@angular\router" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\@angular-devkit\architect" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\@angular-devkit\build-angular" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\@angular-devkit\build-optimizer" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\@angular-devkit\build-webpack" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\@angular-devkit\core" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\@angular-devkit\schematics" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\@ngtools\webpack" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\@types" t="IncludeRecursive">
+        <e p="events" t="IncludeRecursive" />
+        <e p="jasmine" t="IncludeRecursive" />
+        <e p="jasminewd2" t="IncludeRecursive" />
+        <e p="minimatch" t="IncludeRecursive" />
+        <e p="node" t="IncludeRecursive" />
+        <e p="source-list-map" t="IncludeRecursive" />
+      </e>
+      <e p="PapersClient\node_modules\acorn" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\ajv" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\arg" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\blocking-proxy" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\canonical-path" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\chalk" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\chokidar" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\codelyzer" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\commander" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\coverage-istanbul-loader" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\dependency-graph" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\fast-deep-equal" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\hash.js" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\jasmine-core" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\jasmine-spec-reporter" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\jest-worker" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\karma" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\karma-chrome-launcher" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\karma-coverage-istanbul-reporter" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\karma-jasmine" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\karma-jasmine-html-reporter" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\license-webpack-plugin" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\magic-string" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\portfinder" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\postcss" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\protractor" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\reflect-metadata" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\rollup" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\rxjs" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\source-map" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\sourcemap-codec" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\symbol-observable" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\terser" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\tree-kill" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\ts-node" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\tslib" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\tslint" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\upath" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\uri-js" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\webdriver-js-extender" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\worker-farm" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\zone.js" t="IncludeRecursive" />
+      <e p="Program.cs" t="Include" />
+      <e p="Properties" t="Include">
+        <e p="launchSettings.json" t="Include" />
+      </e>
+      <e p="Startup.cs" t="Include" />
+    </e>
+  </component>
+</project>
