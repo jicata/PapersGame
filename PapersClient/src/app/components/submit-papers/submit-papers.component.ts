@@ -1,6 +1,10 @@
 import { Component, OnInit } from "@angular/core";
-import { PaperComponent } from "../paper/paper.component";
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { FormBuilder, FormGroup, Validators, FormArray } from "@angular/forms";
+import { Constants        } from '../../constants/constants';
+
+import { Paper } from "src/app/models/paperModel";
+import { CreatePapersService } from "src/app/services/create-papers.service";
+import { RxwebValidators } from "@rxweb/reactive-form-validators";
 
 @Component({
   selector: "app-submit-papers",
@@ -9,31 +13,53 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 })
 export class SubmitPapersComponent implements OnInit {
   form: FormGroup;
-  papers: PaperComponent[];
+  paperInputs: object;
   errorMessage: string;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private createPapersService: CreatePapersService
+  ) {
     this.form = this.formBuilder.group({
-      paperOne: ['', [Validators.required, Validators.minLength(2)]],
-      paperTwo: ['', [Validators.required]],
-      paperThree: ['', [Validators.required]],
-      paperFour: ['', [Validators.required]],
-      paperFive: ['', [Validators.required]]
+      papers: this.formBuilder.array([...this.createPaperFormControls(Constants.DEFAULT_NUMBER_OF_PAPERS)])
     });
   }
 
-  getBackgroundColor() {
-    return this.submitted && this.form.invalid ? 'red' : 'none';
+  addErrorCssClass(paperIndex: string) {
+    const touchedControl = this.papers.controls[paperIndex].get('paper');
+
+    return touchedControl &&
+    (touchedControl.value) &&
+    touchedControl.invalid &&
+    touchedControl.dirty
+      ? Constants.VALIDATION_ERROR_CSS_CLASS
+      : '';
   }
 
   get f() {
     return this.form.controls;
   }
 
+  get papers() {
+    return this.form.get("papers") as FormArray;
+  }
+
   ngOnInit(): void {
-    this.papers = [];
-    this.errorMessage = 'All fields are required';
+    this.createPapersService.getPapers().subscribe(data => console.log(data));
+    this.errorMessage = "All fields are required";
+  }
+
+  createPaperFormControls(papersCount) {
+    const controls = [];
+
+    for (let i = 0; i < papersCount; i++) {
+      const control = this.formBuilder.group(
+        { paper: ['', [Validators.required, Validators.minLength(3), RxwebValidators.unique()]] });
+
+      controls.push(control);
+    }
+    return controls;
   }
 
   submit() {
@@ -42,6 +68,15 @@ export class SubmitPapersComponent implements OnInit {
     if (this.form.invalid) {
       return;
     }
-    console.log(this.form);
+
+    const values = this.form.value;
+
+    const paperModels = Object.keys(values).map(k =>
+      Object.assign(new Paper(), { word: values[k] })
+    );
+
+    this.createPapersService.createPapers(paperModels).subscribe(data => {
+      console.log(data);
+    });
   }
 }

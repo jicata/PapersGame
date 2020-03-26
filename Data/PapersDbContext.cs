@@ -12,6 +12,6 @@
 
         }
 
-        public DbSet<Paper> Type { get; set; }
+        public DbSet<Paper> Papers { get; set; }
     }
 }

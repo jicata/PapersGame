@@ -31,7 +31,7 @@ namespace Papers.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Type");
+                    b.ToTable("Papers");
                 });
 #pragma warning restore 612, 618
         }

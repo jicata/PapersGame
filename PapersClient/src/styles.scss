@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: black;
+    padding: 30px;
+    overflow: hidden;
+}
+
+button, input {
+  padding: 0;
+  border-color: transparent;
+  border-image: none;
+
+}
+
+button:focus,
+input:focus{
+    outline: none;
+}
+
+.validation-error{
+    background-color: rgb(255, 0, 0);
+}

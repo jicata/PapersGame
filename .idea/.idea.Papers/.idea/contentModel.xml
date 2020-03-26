@@ -13,9 +13,12 @@
       <e p="Data" t="Include">
         <e p="PapersDbContext.cs" t="Include" />
       </e>
+      <e p="DTOs" t="Include">
+        <e p="PaperCreateRequestModel.cs" t="Include" />
+      </e>
       <e p="migrations" t="Include">
-        <e p="20200321163933_initial.cs" t="Include" />
-        <e p="20200321163933_initial.Designer.cs" t="Include" />
+        <e p="20200323154819_initial.cs" t="Include" />
+        <e p="20200323154819_initial.Designer.cs" t="Include" />
         <e p="PapersDbContextModelSnapshot.cs" t="Include" />
       </e>
       <e p="Models" t="Include">
@@ -28,6 +31,7 @@
           </e>
         </e>
       </e>
+      <e p="package-lock.json" t="Include" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="Papers.csproj" t="IncludeRecursive" />
       <e p="Papers.sln" t="IncludeFlat" />
@@ -48,6 +52,7 @@
       <e p="PapersClient\node_modules\@angular-devkit\core" t="IncludeRecursive" />
       <e p="PapersClient\node_modules\@angular-devkit\schematics" t="IncludeRecursive" />
       <e p="PapersClient\node_modules\@ngtools\webpack" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\@rxweb\reactive-form-validators" t="IncludeRecursive" />
       <e p="PapersClient\node_modules\@types" t="IncludeRecursive">
         <e p="events" t="IncludeRecursive" />
         <e p="jasmine" t="IncludeRecursive" />
@@ -85,6 +90,7 @@
       <e p="PapersClient\node_modules\reflect-metadata" t="IncludeRecursive" />
       <e p="PapersClient\node_modules\rollup" t="IncludeRecursive" />
       <e p="PapersClient\node_modules\rxjs" t="IncludeRecursive" />
+      <e p="PapersClient\node_modules\sass" t="IncludeRecursive" />
       <e p="PapersClient\node_modules\source-map" t="IncludeRecursive" />
       <e p="PapersClient\node_modules\sourcemap-codec" t="IncludeRecursive" />
       <e p="PapersClient\node_modules\symbol-observable" t="IncludeRecursive" />

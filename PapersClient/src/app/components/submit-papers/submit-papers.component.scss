@@ -1,0 +1,31 @@
+.create-papers-container {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -60%);
+  text-align: center;
+}
+
+.create-papers-form {
+  text-align: center;
+}
+
+.paper-input-container {
+  padding: 10px;
+  margin-bottom: 2px;
+}
+
+.paper-input-container input {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.create-papers-submit {
+  margin-top: 10px;
+  padding: 10px 30px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+}
+

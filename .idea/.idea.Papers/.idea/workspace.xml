@@ -2,11 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3c377fd-e447-4317-8835-229d7d7bb64d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/DTOs/PaperCreateRequestModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Papers/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Papers/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Papers/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Papers/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/PapersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/PapersController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/PapersDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/PapersDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/20200321163933_initial.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/20200321163933_initial.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/PapersDbContextModelSnapshot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PapersClient/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/PapersClient/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PapersClient/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/PapersClient/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PapersClient/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/PapersClient/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PapersClient/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/PapersClient/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PapersClient/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/PapersClient/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PapersClient/src/app/app.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/PapersClient/src/app/app.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PapersClient/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/PapersClient/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PapersClient/src/app/components/submit-papers/submit-papers.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/PapersClient/src/app/components/submit-papers/submit-papers.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PapersClient/src/app/components/submit-papers/submit-papers.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/PapersClient/src/app/components/submit-papers/submit-papers.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PapersClient/src/app/components/submit-papers/submit-papers.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/PapersClient/src/app/components/submit-papers/submit-papers.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PapersClient/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/PapersClient/src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PapersClient/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/PapersClient/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PapersClient/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/PapersClient/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.0/Papers.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.0/Papers.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.0/Papers.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.0/Papers.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.0/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.0/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.0/Papers.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.0/Papers.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.0/Papers.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.0/Papers.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/netcoreapp3.0/Papers.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/netcoreapp3.0/Papers.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,11 +36,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/PapersClient" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Startup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/PapersDbContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DTOs/PaperCreateRequestModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/Paper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Controllers/PapersController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Program.cs" root0="FORCE_HIGHLIGHTING" />
@@ -26,11 +49,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Data/PapersDbContext.cs" />
         <option value="$PROJECT_DIR$/appsettings.json" />
         <option value="$PROJECT_DIR$/Startup.cs" />
-        <option value="$PROJECT_DIR$/Controllers/PapersController.cs" />
         <option value="$PROJECT_DIR$/Models/Paper.cs" />
+        <option value="$PROJECT_DIR$/Properties/launchSettings.json" />
+        <option value="$PROJECT_DIR$/DTOs/PaperCreateRequestModel.cs" />
+        <option value="$PROJECT_DIR$/Data/PapersDbContext.cs" />
+        <option value="$PROJECT_DIR$/Controllers/PapersController.cs" />
       </list>
     </option>
   </component>
@@ -101,7 +126,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584797080899</updated>
-      <workItem from="1584797083406" duration="5809000" />
+      <workItem from="1584797083406" duration="15520000" />
     </task>
     <servers />
   </component>
@@ -125,6 +150,78 @@
     </ignored-roots>
   </component>
   <component name="WindowStateProjectService">
+    <state width="408" height="466" key="DebuggerActiveHint" timestamp="1584979355199">
+      <screen x="1920" y="-78" width="1680" height="1010" />
+    </state>
+    <state width="408" height="466" key="DebuggerActiveHint/0.0.1920.1040/1920.-78.1680.1010@1920.-78.1680.1010" timestamp="1584979355199" />
+    <state width="1637" height="282" key="GridCell.Tab.0.bottom" timestamp="1585050105977">
+      <screen x="1920" y="-78" width="1680" height="1010" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.-78.1680.1010@0.0.1920.1040" timestamp="1584976009551" />
+    <state width="1637" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.-78.1680.1010@1920.-78.1680.1010" timestamp="1585050105977" />
+    <state width="1637" height="282" key="GridCell.Tab.0.center" timestamp="1585050105977">
+      <screen x="1920" y="-78" width="1680" height="1010" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.-78.1680.1010@0.0.1920.1040" timestamp="1584976009550" />
+    <state width="1637" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.-78.1680.1010@1920.-78.1680.1010" timestamp="1585050105977" />
+    <state width="1637" height="282" key="GridCell.Tab.0.left" timestamp="1585050105977">
+      <screen x="1920" y="-78" width="1680" height="1010" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.-78.1680.1010@0.0.1920.1040" timestamp="1584976009550" />
+    <state width="1637" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.-78.1680.1010@1920.-78.1680.1010" timestamp="1585050105977" />
+    <state width="1637" height="282" key="GridCell.Tab.0.right" timestamp="1585050105977">
+      <screen x="1920" y="-78" width="1680" height="1010" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.-78.1680.1010@0.0.1920.1040" timestamp="1584976009550" />
+    <state width="1637" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.-78.1680.1010@1920.-78.1680.1010" timestamp="1585050105977" />
+    <state width="1637" height="336" key="GridCell.Tab.1.bottom" timestamp="1585050105434">
+      <screen x="1920" y="-78" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.-78.1680.1010@1920.-78.1680.1010" timestamp="1585050105434" />
+    <state width="1637" height="336" key="GridCell.Tab.1.center" timestamp="1585050105434">
+      <screen x="1920" y="-78" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.1.center/0.0.1920.1040/1920.-78.1680.1010@1920.-78.1680.1010" timestamp="1585050105434" />
+    <state width="1637" height="336" key="GridCell.Tab.1.left" timestamp="1585050105434">
+      <screen x="1920" y="-78" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.1.left/0.0.1920.1040/1920.-78.1680.1010@1920.-78.1680.1010" timestamp="1585050105434" />
+    <state width="1637" height="336" key="GridCell.Tab.1.right" timestamp="1585050105434">
+      <screen x="1920" y="-78" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.1.right/0.0.1920.1040/1920.-78.1680.1010@1920.-78.1680.1010" timestamp="1585050105434" />
+    <state width="1637" height="336" key="GridCell.Tab.2.bottom" timestamp="1585050105434">
+      <screen x="1920" y="-78" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.2.bottom/0.0.1920.1040/1920.-78.1680.1010@1920.-78.1680.1010" timestamp="1585050105434" />
+    <state width="1637" height="336" key="GridCell.Tab.2.center" timestamp="1585050105434">
+      <screen x="1920" y="-78" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.2.center/0.0.1920.1040/1920.-78.1680.1010@1920.-78.1680.1010" timestamp="1585050105434" />
+    <state width="1637" height="336" key="GridCell.Tab.2.left" timestamp="1585050105434">
+      <screen x="1920" y="-78" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.2.left/0.0.1920.1040/1920.-78.1680.1010@1920.-78.1680.1010" timestamp="1585050105434" />
+    <state width="1637" height="336" key="GridCell.Tab.2.right" timestamp="1585050105434">
+      <screen x="1920" y="-78" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.2.right/0.0.1920.1040/1920.-78.1680.1010@1920.-78.1680.1010" timestamp="1585050105434" />
+    <state width="1637" height="336" key="GridCell.Tab.3.bottom" timestamp="1585050105434">
+      <screen x="1920" y="-78" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.3.bottom/0.0.1920.1040/1920.-78.1680.1010@1920.-78.1680.1010" timestamp="1585050105434" />
+    <state width="1637" height="336" key="GridCell.Tab.3.center" timestamp="1585050105434">
+      <screen x="1920" y="-78" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.3.center/0.0.1920.1040/1920.-78.1680.1010@1920.-78.1680.1010" timestamp="1585050105434" />
+    <state width="1637" height="336" key="GridCell.Tab.3.left" timestamp="1585050105434">
+      <screen x="1920" y="-78" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.3.left/0.0.1920.1040/1920.-78.1680.1010@1920.-78.1680.1010" timestamp="1585050105434" />
+    <state width="1637" height="336" key="GridCell.Tab.3.right" timestamp="1585050105434">
+      <screen x="1920" y="-78" width="1680" height="1010" />
+    </state>
+    <state width="1637" height="336" key="GridCell.Tab.3.right/0.0.1920.1040/1920.-78.1680.1010@1920.-78.1680.1010" timestamp="1585050105434" />
     <state x="461" y="163" key="SettingsEditor" timestamp="1584970723587">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -133,9 +230,41 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="254" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.-78.1680.1010@0.0.1920.1040" timestamp="1584970553615" />
-    <state x="2423" y="139" key="search.everywhere.popup" timestamp="1584808223955">
+    <state x="2423" y="139" width="672" height="678" key="search.everywhere.popup" timestamp="1584978558396">
       <screen x="1920" y="-78" width="1680" height="1010" />
     </state>
-    <state x="2423" y="139" key="search.everywhere.popup/0.0.1920.1040/1920.-78.1680.1010@1920.-78.1680.1010" timestamp="1584808223955" />
+    <state x="2423" y="139" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.-78.1680.1010@1920.-78.1680.1010" timestamp="1584978558396" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Controllers/PapersController.cs</url>
+          <line>27</line>
+          <properties documentPath="$PROJECT_DIR$/Controllers/PapersController.cs" initialLine="17">
+            <startOffsets>
+              <option value="647" />
+            </startOffsets>
+            <endOffsets>
+              <option value="813" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Controllers/PapersController.cs</url>
+          <line>41</line>
+          <properties documentPath="$PROJECT_DIR$/Controllers/PapersController.cs" initialLine="41">
+            <startOffsets>
+              <option value="1082" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1132" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

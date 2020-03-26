@@ -9,7 +9,7 @@ using Papers.Data;
 namespace Papers.Migrations
 {
     [DbContext(typeof(PapersDbContext))]
-    [Migration("20200321163933_initial")]
+    [Migration("20200323154819_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,7 +33,7 @@ namespace Papers.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Type");
+                    b.ToTable("Papers");
                 });
 #pragma warning restore 612, 618
         }
