@@ -1,4 +1,6 @@
-.create-papers-container {
+$white-color: white;
+
+.create-papers {
   top: 50%;
   left: 50%;
   position: absolute;
@@ -6,26 +8,57 @@
   text-align: center;
 }
 
-.create-papers-form {
+.create-papers__form {
   text-align: center;
 }
 
-.paper-input-container {
+.create-papers__inputs {
   padding: 10px;
   margin-bottom: 2px;
 }
 
-.paper-input-container input {
+.create-paper__input {
   padding: 10px;
   border-radius: 10px;
 }
 
-.create-papers-submit {
+.create-papers__submit {
   margin-top: 10px;
   padding: 10px 30px;
   border-radius: 100px;
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
+  background-color: $white-color;
+
+  &:enabled{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+    
+    animation: moveInBottom .3s ease-out;
+    animation-fill-mode: forwards;
+  
+  }
+  
+  &:active{
+    transform: translateY(-1px);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, .2);
+  }
+  
+  
 }
 
+
+@keyframes moveInBottom{
+  0% {
+      transform: translateY(-1px);
+  }
+
+  50% {
+    transform: translateY(-2px);
+  }
+
+  100%{
+      transform: translateY(-3px);
+
+  }
+}

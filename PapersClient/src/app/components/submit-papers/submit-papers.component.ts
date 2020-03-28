@@ -27,7 +27,8 @@ export class SubmitPapersComponent implements OnInit {
   }
 
   addErrorCssClass(paperIndex: string) {
-    const touchedControl = this.papers.controls[paperIndex].get('paper');
+    const touchedControl = this.getControls()[paperIndex].get('paper');
+    console.log(this.form.invalid);
 
     return touchedControl &&
     (touchedControl.value) &&
@@ -41,8 +42,8 @@ export class SubmitPapersComponent implements OnInit {
     return this.form.controls;
   }
 
-  get papers() {
-    return this.form.get("papers") as FormArray;
+  getControls() {
+    return (this.form.get('papers') as FormArray).controls;
   }
 
   ngOnInit(): void {
@@ -55,7 +56,12 @@ export class SubmitPapersComponent implements OnInit {
 
     for (let i = 0; i < papersCount; i++) {
       const control = this.formBuilder.group(
-        { paper: ['', [Validators.required, Validators.minLength(3), RxwebValidators.unique()]] });
+        { paper: ['', [
+          Validators.required,
+          Validators.minLength(3),
+          RxwebValidators.unique(),
+            Validators.pattern('^[А-Яа-я0-9]{3,}$')
+          ]] });
 
       controls.push(control);
     }
@@ -68,6 +74,7 @@ export class SubmitPapersComponent implements OnInit {
     if (this.form.invalid) {
       return;
     }
+    return;
 
     const values = this.form.value;
 

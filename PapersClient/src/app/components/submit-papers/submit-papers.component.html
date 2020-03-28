@@ -1,21 +1,18 @@
-<div class="create-papers-container">
+<div class="create-papers">
     <h1>Твоите листчета 📜</h1>
-    <p>Пет думи 5️⃣🆗. Минимум три букви на дума 3️⃣🔤. Без повтарящи се думи ❌🔁</p>
-  <form class="create-papers-form" [formGroup]="form" (ngSubmit)="submit()">
+    <p>Пет думи 5️⃣🆗. Минимум три букви на дума 3️⃣🔤. Без повтарящи се думи ❌🔁. Само кирилица 📝✅</p>
+  <form class="create-papers__form" [formGroup]="form" (ngSubmit)="submit()">
       <div formArrayName="papers">
-        <div [formGroup]="paperGroup" class="paper-input-container" *ngFor="let paperGroup of form.controls.papers.controls; let i = index">
-          <!-- <label>{{i+1}} </label> -->
+        <div [formGroup]="paperGroup" class="create-papers__inputs" *ngFor="let paperGroup of getControls(); let i = index">
             <input
+              class="create-paper__input"
               type="text"
               formControlName="paper"
               [ngClass]="addErrorCssClass(i)"
             />
         </div>
       </div>
-    <div *ngIf="submitted && form.invalid">
-      <div>{{ errorMessage }}</div>
-    </div>
-    <button class="create-papers-submit" type="submit">Готово</button>
+    <button class="create-papers__submit" [disabled]="form.invalid" type="submit">Готово</button>
   </form>
 
 </div>
