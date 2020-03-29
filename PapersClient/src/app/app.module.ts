@@ -9,13 +9,15 @@ import { SubmitPapersComponent } from './components/submit-papers/submit-papers.
 import { CreatePapersService } from './services/create-papers.service';
 import { HttpClientModule } from '@angular/common/http';
 
-import { RxReactiveFormsModule } from "@rxweb/reactive-form-validators"
+import { RxReactiveFormsModule } from "@rxweb/reactive-form-validators";
+import { SignalrTestComponent } from './signalr-test/signalr-test.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     PaperComponent,
-    SubmitPapersComponent
+    SubmitPapersComponent,
+    SignalrTestComponent
   ],
   imports: [
     HttpClientModule,
