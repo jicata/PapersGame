@@ -1,4 +1,4 @@
 export enum Constants {
-    DEFAULT_NUMBER_OF_PAPERS = 5,
+    DEFAULT_NUMBER_OF_PAPERS = 1,
     VALIDATION_ERROR_CSS_CLASS = 'validation-error',
 }
