@@ -1,14 +1,36 @@
 ﻿namespace Papers.Hubs
 {
+    using System.Collections.Generic;
+    using System.Linq;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.SignalR;
+    using Microsoft.EntityFrameworkCore.Internal;
 
     [Route("/playground")]
     public class PlaygroundHub : Hub
     {
-        public void Join(string message)
+        private static Dictionary<string, List<string>> gameSessions = new Dictionary<string, List<string>>();
+
+        public void JoinOrCreate(string gameSessionId)
         {
-            Clients.All.SendAsync("Join", message);
+            var gameSessionExists = gameSessions.Keys.Any(k => k == gameSessionId);
+
+            if (!gameSessionExists)
+            {
+                gameSessions.Add(gameSessionId, new List<string>{ Context.ConnectionId });
+            }
+            else
+            {
+                gameSessions[gameSessionId].Add(Context.ConnectionId);
+            }
+
+            this.BroadcastGameSession(gameSessionId);
+        }
+
+        private void BroadcastGameSession(string gameSessionId)
+        {
+            var clients = gameSessions[gameSessionId];
+            Clients.Clients(clients).SendAsync("GameSessions", clients);
         }
     }
 }
