@@ -11,6 +11,7 @@ namespace Papers
     using Microsoft.EntityFrameworkCore;
 
     using Papers.Data;
+    using Papers.Hubs;
 
     public class Startup
     {
@@ -24,6 +25,8 @@ namespace Papers
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSignalR();
+
             services.AddDbContext<PapersDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
@@ -44,16 +47,15 @@ namespace Papers
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,  PapersDbContext dbContext)
         {
+            dbContext.Database.EnsureDeleted();
+            dbContext.Database.Migrate();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.UseCors("CorsPolicy");
-
-            app.UseSpaStaticFiles();
 
             app.UseHttpsRedirection();
 
@@ -61,7 +63,15 @@ namespace Papers
 
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+            // configuration for Angular client
+            app.UseCors("CorsPolicy");
+
+            app.UseSpaStaticFiles();
+
+            app.UseEndpoints(endpoints => {
+                endpoints.MapControllers();
+                endpoints.MapHub<EchoHub>("/echo");
+            });
 
             app.UseSpa(spa =>
             {
