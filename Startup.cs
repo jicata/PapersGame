@@ -70,7 +70,7 @@ namespace Papers
 
             app.UseEndpoints(endpoints => {
                 endpoints.MapControllers();
-                endpoints.MapHub<EchoHub>("/echo");
+                endpoints.MapHub<PlaygroundHub>("/playground");
             });
 
             app.UseSpa(spa =>
