@@ -1,20 +1,19 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators, FormArray } from "@angular/forms";
-import { Constants        } from '../../constants/constants';
+import { Constants } from '../../constants/constants';
 
 import { Paper } from "src/app/models/paperModel";
 import { CreatePapersService } from "src/app/services/create-papers.service";
 import { RxwebValidators } from "@rxweb/reactive-form-validators";
 
 @Component({
-  selector: "app-submit-papers",
-  templateUrl: "./submit-papers.component.html",
-  styleUrls: ["./submit-papers.component.scss"]
+  selector: "app-create-papers",
+  templateUrl: "./create-papers.component.html",
+  styleUrls: ["./create-papers.component.scss"]
 })
-export class SubmitPapersComponent implements OnInit {
+export class CreatePapersComponent implements OnInit {
   form: FormGroup;
   paperInputs: object;
-  errorMessage: string;
   submitted = false;
 
   constructor(
@@ -28,7 +27,6 @@ export class SubmitPapersComponent implements OnInit {
 
   addErrorCssClass(paperIndex: string) {
     const touchedControl = this.getControls()[paperIndex].get('paper');
-    console.log(this.form.invalid);
 
     return touchedControl &&
     (touchedControl.value) &&
@@ -38,17 +36,11 @@ export class SubmitPapersComponent implements OnInit {
       : '';
   }
 
-  get f() {
-    return this.form.controls;
-  }
-
   getControls() {
     return (this.form.get('papers') as FormArray).controls;
   }
 
   ngOnInit(): void {
-    this.createPapersService.getPapers().subscribe(data => console.log(data));
-    this.errorMessage = "All fields are required";
   }
 
   createPaperFormControls(papersCount) {
@@ -74,12 +66,12 @@ export class SubmitPapersComponent implements OnInit {
     if (this.form.invalid) {
       return;
     }
-    return;
 
-    const values = this.form.value;
+    const values = this.form.get('papers').value;
+    console.log(values);
 
     const paperModels = Object.keys(values).map(k =>
-      Object.assign(new Paper(), { word: values[k] })
+      Object.assign(new Paper(), { word: values[k]['paper'] })
     );
 
     this.createPapersService.createPapers(paperModels).subscribe(data => {
