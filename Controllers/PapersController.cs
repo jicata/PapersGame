@@ -37,12 +37,12 @@
         [HttpPost]
         public async Task<IActionResult> PostPapers(IEnumerable<PaperCreateRequestModel> papers)
         {
-            var papersEntites = papers.Select(p => new Paper { Word = p.Word });
+            var paperEntities = papers.Select(p => new Paper { Word = p.Word });
 
-            await this.db.Papers.AddRangeAsync(papersEntites);
+            await this.db.Papers.AddRangeAsync(paperEntities);
             await this.db.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(this.GetPapers), papersEntites);
+            return CreatedAtAction(nameof(this.GetPapers), paperEntities);
         }
     }
 }
