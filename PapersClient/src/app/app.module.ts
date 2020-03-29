@@ -5,19 +5,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PaperComponent } from './components/paper/paper.component';
-import { SubmitPapersComponent } from './components/submit-papers/submit-papers.component';
+import { CreatePapersComponent } from './components/create-papers/create-papers.component';
 import { CreatePapersService } from './services/create-papers.service';
 import { HttpClientModule } from '@angular/common/http';
 
-import { RxReactiveFormsModule } from "@rxweb/reactive-form-validators";
-import { SignalrTestComponent } from './signalr-test/signalr-test.component'
+import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 
 @NgModule({
   declarations: [
     AppComponent,
     PaperComponent,
-    SubmitPapersComponent,
-    SignalrTestComponent
+    CreatePapersComponent
   ],
   imports: [
     HttpClientModule,
