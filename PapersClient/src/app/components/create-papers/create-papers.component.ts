@@ -1,10 +1,12 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators, FormArray } from "@angular/forms";
-import { Constants } from '../../constants/constants';
+import { Constants } from "../../constants/constants";
 
 import { Paper } from "src/app/models/paperModel";
-import { CreatePapersService } from "src/app/services/create-papers.service";
+import { CreatePapersService } from "src/app/services/create-papers/create-papers.service";
 import { RxwebValidators } from "@rxweb/reactive-form-validators";
+import { Router } from "@angular/router";
+import { PlaygroundService } from "src/app/services/signalr/playground.service";
 
 @Component({
   selector: "app-create-papers",
@@ -15,29 +17,34 @@ export class CreatePapersComponent implements OnInit {
   form: FormGroup;
   paperInputs: object;
   submitted = false;
+  gameSessionId: string = 'basi_kura';
 
   constructor(
     private formBuilder: FormBuilder,
-    private createPapersService: CreatePapersService
+    private createPapersService: CreatePapersService,
+    private router: Router,
+    private playgroundSignalRService: PlaygroundService
   ) {
     this.form = this.formBuilder.group({
-      papers: this.formBuilder.array([...this.createPaperFormControls(Constants.DEFAULT_NUMBER_OF_PAPERS)])
+      papers: this.formBuilder.array([
+        ...this.createPaperFormControls(Constants.DEFAULT_NUMBER_OF_PAPERS)
+      ])
     });
   }
 
   addErrorCssClass(paperIndex: string) {
-    const touchedControl = this.getControls()[paperIndex].get('paper');
+    const touchedControl = this.getControls()[paperIndex].get("paper");
 
     return touchedControl &&
-    (touchedControl.value) &&
-    touchedControl.invalid &&
-    touchedControl.dirty
+      touchedControl.value &&
+      touchedControl.invalid &&
+      touchedControl.dirty
       ? Constants.VALIDATION_ERROR_CSS_CLASS
-      : '';
+      : "";
   }
 
   getControls() {
-    return (this.form.get('papers') as FormArray).controls;
+    return (this.form.get("papers") as FormArray).controls;
   }
 
   ngOnInit(): void {
@@ -47,13 +54,17 @@ export class CreatePapersComponent implements OnInit {
     const controls = [];
 
     for (let i = 0; i < papersCount; i++) {
-      const control = this.formBuilder.group(
-        { paper: ['', [
-          Validators.required,
-          Validators.minLength(3),
-          RxwebValidators.unique(),
-            Validators.pattern('^[А-Яа-я0-9]{3,}$')
-          ]] });
+      const control = this.formBuilder.group({
+        paper: [
+          "",
+          [
+            Validators.required,
+            Validators.minLength(3),
+            RxwebValidators.unique(),
+            Validators.pattern("^[А-Яа-я0-9]{3,}$")
+          ]
+        ]
+      });
 
       controls.push(control);
     }
@@ -67,15 +78,16 @@ export class CreatePapersComponent implements OnInit {
       return;
     }
 
-    const values = this.form.get('papers').value;
-    console.log(values);
+    const values = this.form.get("papers").value;
 
     const paperModels = Object.keys(values).map(k =>
-      Object.assign(new Paper(), { word: values[k]['paper'] })
+      Object.assign(new Paper(), { word: values[k]["paper"] })
     );
 
     this.createPapersService.createPapers(paperModels).subscribe(data => {
-      console.log(data);
+      this.playgroundSignalRService
+        .joinOrCreatePlayground(this.gameSessionId);
+      this.router.navigate(["/playground"]);
     });
   }
 }
