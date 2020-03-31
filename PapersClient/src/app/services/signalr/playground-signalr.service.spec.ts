@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { PlaygroundService } from './playground.service';
+import { PlaygroundSignalRService } from './playground-signalr.service';
 
 describe('PlaygroundService', () => {
-  let service: PlaygroundService;
+  let service: PlaygroundSignalRService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(PlaygroundService);
+    service = TestBed.inject(PlaygroundSignalRService);
   });
 
   it('should be created', () => {

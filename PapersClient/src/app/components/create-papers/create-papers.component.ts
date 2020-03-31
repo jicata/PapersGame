@@ -6,7 +6,7 @@ import { Paper } from "src/app/models/paperModel";
 import { CreatePapersService } from "src/app/services/create-papers/create-papers.service";
 import { RxwebValidators } from "@rxweb/reactive-form-validators";
 import { Router } from "@angular/router";
-import { PlaygroundService } from "src/app/services/signalr/playground.service";
+import { PlaygroundSignalRService } from "src/app/services/signalr/playground-signalr.service";
 
 @Component({
   selector: "app-create-papers",
@@ -23,7 +23,7 @@ export class CreatePapersComponent implements OnInit {
     private formBuilder: FormBuilder,
     private createPapersService: CreatePapersService,
     private router: Router,
-    private playgroundSignalRService: PlaygroundService
+    private playgroundSignalRService: PlaygroundSignalRService
   ) {
     this.form = this.formBuilder.group({
       papers: this.formBuilder.array([

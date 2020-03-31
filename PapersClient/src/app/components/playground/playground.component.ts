@@ -1,6 +1,6 @@
-import { Component, OnInit, ChangeDetectorRef, Input } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { HubConnection } from "@microsoft/signalr";
-import { PlaygroundService } from "src/app/services/signalr/playground.service";
+import { PlaygroundSignalRService } from "src/app/services/signalr/playground-signalr.service";
 
 @Component({
   selector: "app-playground",
@@ -11,7 +11,7 @@ export class PlaygroundComponent implements OnInit {
   hubConnection: HubConnection;
   players: string[] = [];
 
-  constructor(private playgroundSignalRService: PlaygroundService) {}
+  constructor(private playgroundSignalRService: PlaygroundSignalRService) {}
 
   ngOnInit(): void {
     this.playgroundSignalRService

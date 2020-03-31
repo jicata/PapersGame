@@ -4,7 +4,7 @@ import { BaseSignalRService } from "./base/base-signalr.service";
 @Injectable({
   providedIn: "root"
 })
-export class PlaygroundService extends BaseSignalRService {
+export class PlaygroundSignalRService extends BaseSignalRService {
   constructor() {
     super("/playground");
   }
