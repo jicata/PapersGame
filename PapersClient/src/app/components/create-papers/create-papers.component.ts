@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators, FormArray } from "@angular/forms";
-import { Constants } from "../../constants/constants";
+import { CONSTANTS } from "../../constants/constants";
 
 import { Paper } from "src/app/models/paperModel";
 import { CreatePapersService } from "src/app/services/create-papers/create-papers.service";
@@ -27,7 +27,7 @@ export class CreatePapersComponent implements OnInit {
   ) {
     this.form = this.formBuilder.group({
       papers: this.formBuilder.array([
-        ...this.createPaperFormControls(Constants.DEFAULT_NUMBER_OF_PAPERS)
+        ...this.createPaperFormControls(CONSTANTS.DEFAULT_NUMBER_OF_PAPERS)
       ])
     });
   }
@@ -39,7 +39,7 @@ export class CreatePapersComponent implements OnInit {
       touchedControl.value &&
       touchedControl.invalid &&
       touchedControl.dirty
-      ? Constants.VALIDATION_ERROR_CSS_CLASS
+      ? CONSTANTS.VALIDATION_ERROR_CSS_CLASS
       : "";
   }
 

@@ -24,13 +24,13 @@
                 gameSessions[gameSessionId].Add(Context.ConnectionId);
             }
 
-            this.BroadcastGameSession(gameSessionId);
+            this.UpdateGameSession(gameSessionId);
         }
 
-        private void BroadcastGameSession(string gameSessionId)
+        private void UpdateGameSession(string gameSessionId)
         {
             var clients = gameSessions[gameSessionId];
-            Clients.Clients(clients).SendAsync("GameSessions", clients);
+            Clients.Clients(clients).SendAsync("UpdateGameSession", clients);
         }
     }
 }

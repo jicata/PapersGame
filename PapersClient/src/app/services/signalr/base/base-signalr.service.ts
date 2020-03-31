@@ -1,5 +1,6 @@
 import { HubConnection, HubConnectionBuilder } from "@microsoft/signalr";
 import { environment } from "src/environments/environment";
+import { SIGNALR } from '../../../constants/signalRConstants'
 
 export class BaseSignalRService {
   public hubConnection: HubConnection;
@@ -9,7 +10,7 @@ export class BaseSignalRService {
       .withUrl(environment.baseAppUrl + hubUrl)
       .build();
 
-    this.hubConnection.serverTimeoutInMilliseconds = 1000 * 100;
+    this.hubConnection.serverTimeoutInMilliseconds = SIGNALR.SERVER_TIMEOUT_DEFAULT_INTERVAL;
 
     this.start();
   }
@@ -25,7 +26,7 @@ export class BaseSignalRService {
     return this.hubConnection.invoke(hubEndpoint, data);
   }
 
-  stop(){
+  stop() {
     this.hubConnection.stop();
   }
 }

@@ -1,5 +1,3 @@
 <div *ngIf="players.length > 0" (loadNext)="onLoadNext()">
     <p *ngFor="let player of players">{{player}}</p>
 </div>
-
-<button (click)="onLoadNext()">Refresh</button>
