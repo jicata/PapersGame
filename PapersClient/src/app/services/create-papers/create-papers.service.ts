@@ -1,29 +1,21 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 import { retry, catchError } from 'rxjs/operators';
-import { environment } from 'src/environments/environment';
 import { Paper } from '../../models/paperModel';
+import { BaseService } from '../base/base.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CreatePapersService {
-  baseAppUrl: string;
-  apiUrl: string;
+export class CreatePapersService extends BaseService {
 
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json; charset=utf-8'
-    })
-  };
-  constructor(private http: HttpClient) {
-    this.baseAppUrl = environment.baseAppUrl;
+  constructor(http: HttpClient) {
+    super(http);
     this.apiUrl = '/api/Papers/';
   }
 
   getPapers() {
-    return this.http.get<Paper[]>(this.baseAppUrl + this.apiUrl, this.httpOptions)
+    return this.httpClient.get<Paper[]>(this.baseAppUrl + this.apiUrl, this.httpOptions)
       .pipe(
         retry(1),
         catchError(this.errorHandler)
@@ -31,7 +23,7 @@ export class CreatePapersService {
   }
 
   createPapers(papers) {
-    return this.http.post<Paper[]>(
+    return this.httpClient.post<Paper[]>(
       this.baseAppUrl + this.apiUrl,
       JSON.stringify(papers),
        this.httpOptions)
@@ -40,18 +32,4 @@ export class CreatePapersService {
         catchError(this.errorHandler)
       );
   }
-
-  errorHandler(error) {
-    let errorMessage = '';
-    if (error.error instanceof ErrorEvent) {
-      // Get client-side error
-      errorMessage = error.error.message;
-    } else {
-      // Get server-side error
-      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
-    }
-    console.log(errorMessage);
-    return throwError(errorMessage);
-  }
-
 }

@@ -6,7 +6,8 @@ import { Paper } from "src/app/models/paperModel";
 import { CreatePapersService } from "src/app/services/create-papers/create-papers.service";
 import { RxwebValidators } from "@rxweb/reactive-form-validators";
 import { Router } from "@angular/router";
-import { PlaygroundSignalRService } from "src/app/services/signalr/playground-signalr.service";
+import { PlaygroundCommunicationService } from "src/app/services/signalr/playground-communication.service";
+import { PlaygroundService } from 'src/app/services/playground/playground.service';
 
 @Component({
   selector: "app-create-papers",
@@ -23,7 +24,8 @@ export class CreatePapersComponent implements OnInit {
     private formBuilder: FormBuilder,
     private createPapersService: CreatePapersService,
     private router: Router,
-    private playgroundSignalRService: PlaygroundSignalRService
+    private playgroundCommunicationService: PlaygroundCommunicationService,
+    private playgroundService: PlaygroundService
   ) {
     this.form = this.formBuilder.group({
       papers: this.formBuilder.array([
@@ -48,6 +50,10 @@ export class CreatePapersComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // temp solution to enforce limitation
+    this.playgroundCommunicationService.subscribeToPlayerLimitReached(
+      () => this.router.navigate(["/"]));
+    this.playgroundService.setPlayerLimit(6).subscribe();
   }
 
   createPaperFormControls(papersCount) {
@@ -85,7 +91,7 @@ export class CreatePapersComponent implements OnInit {
     );
 
     this.createPapersService.createPapers(paperModels).subscribe(data => {
-      this.playgroundSignalRService
+      this.playgroundCommunicationService
         .joinOrCreatePlayground(this.gameSessionId);
       this.router.navigate(["/playground"]);
     });

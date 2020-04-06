@@ -2,6 +2,8 @@ namespace Papers
 {
     using System;
     using System.IO;
+    using System.Linq;
+    using System.Reflection;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.SpaServices.AngularCli;
@@ -12,6 +14,7 @@ namespace Papers
 
     using Papers.Data;
     using Papers.Hubs;
+    using Papers.Services;
 
     public class Startup
     {
@@ -44,6 +47,17 @@ namespace Papers
             });
 
             services.AddControllers();
+
+            var definedTypes = Assembly.GetExecutingAssembly().DefinedTypes;
+            var serviceInterfaces = definedTypes
+                .Where(c => c.IsInterface && c.ImplementedInterfaces.Contains(typeof(IService))).ToList();
+
+            foreach (var serviceInterface in serviceInterfaces)
+            {
+                var concreteType = definedTypes.FirstOrDefault(c => c.IsClass && c.Name == serviceInterfaces.FirstOrDefault().Name.Substring(1));
+                services.AddSingleton(serviceInterface, concreteType);
+            }
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

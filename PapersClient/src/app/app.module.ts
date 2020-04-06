@@ -11,13 +11,15 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { PlaygroundComponent } from './components/playground/playground.component';
+import { PlayerComponent } from './components/player/player.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PaperComponent,
     CreatePapersComponent,
-    PlaygroundComponent
+    PlaygroundComponent,
+    PlayerComponent
   ],
   imports: [
     HttpClientModule,

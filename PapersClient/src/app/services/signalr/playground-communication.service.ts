@@ -5,7 +5,7 @@ import { SIGNALR } from '../../constants/signalRConstants';
 @Injectable({
   providedIn: "root"
 })
-export class PlaygroundSignalRService extends BaseSignalRService {
+export class PlaygroundCommunicationService extends BaseSignalRService {
   constructor() {
     super(SIGNALR.PLAYGROUND.HUB_ENDPOINT);
   }
@@ -20,5 +20,15 @@ export class PlaygroundSignalRService extends BaseSignalRService {
     });
   }
 
+  subscribeToPlayerLimitReached(action){
+    this.hubConnection.on(SIGNALR.PLAYGROUND.METHODS.PLAYER_LIMIT_REACHED, (msg) => {
+      action(msg);
+    });
+  }
 
+  subscribeToPlayerJoined(action){
+    this.hubConnection.on(SIGNALR.PLAYGROUND.METHODS.PLAYER_JOINED, (msg) => {
+      action(msg);
+    });
+  }
 }

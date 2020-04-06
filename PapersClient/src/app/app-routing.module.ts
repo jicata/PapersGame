@@ -5,7 +5,8 @@ import { PlaygroundComponent } from './components/playground/playground.componen
 
 const routes: Routes = [
   { path: '', component: CreatePapersComponent, pathMatch: 'full' },
-  { path: 'playground', component: PlaygroundComponent, pathMatch: 'full' }
+  { path: 'playground', component: PlaygroundComponent },
+  { path: "*", component: CreatePapersComponent }
 ];
 
 @NgModule({
