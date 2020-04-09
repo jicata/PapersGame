@@ -12,6 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { PlaygroundComponent } from './components/playground/playground.component';
 import { PlayerComponent } from './components/player/player.component';
+import { CreatePlayerComponent } from './components/create-player/create-player.component';
+import { StartGameComponent } from './components/start-game/start-game.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { PlayerComponent } from './components/player/player.component';
     PaperComponent,
     CreatePapersComponent,
     PlaygroundComponent,
-    PlayerComponent
+    PlayerComponent,
+    CreatePlayerComponent,
+    StartGameComponent
   ],
   imports: [
     HttpClientModule,

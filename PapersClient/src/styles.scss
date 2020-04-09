@@ -1,13 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+html{
+    font-size: 10px
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 1.7;
     color: black;
     padding: 30px;
@@ -26,6 +31,3 @@ input:focus{
     outline: none;
 }
 
-.validation-error{
-    background-color: rgb(255, 0, 0);
-}

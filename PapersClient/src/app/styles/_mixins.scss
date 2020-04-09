@@ -1,0 +1,53 @@
+@import "_colors";
+
+
+.container-centered {
+    position: absolute;
+    transform: translate(-50%, -60%);
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 2px;
+}
+
+.btn {
+  margin-top: 10px;
+  padding: 10px 30px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  background-color: $white-color;
+
+  &:enabled {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+    animation: moveInBottom 0.3s ease-out;
+    animation-fill-mode: forwards;
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.input-base {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+@keyframes moveInBottom{
+    0% {
+        transform: translateY(-1px);
+    }
+  
+    50% {
+      transform: translateY(-2px);
+    }
+  
+    100%{
+        transform: translateY(-3px);
+  
+    }
+  }

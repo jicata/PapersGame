@@ -1,11 +1,9 @@
-$white-color: white;
+@import '../../styles/mixins';
+@import '../../styles/global';
 
 .create-papers {
   top: 50%;
   left: 50%;
-  position: absolute;
-  transform: translate(-50%, -60%);
-  text-align: center;
 }
 
 .create-papers__form {

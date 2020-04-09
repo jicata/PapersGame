@@ -1,0 +1,11 @@
+@import '../../styles/mixins';
+@import '../../styles/global';
+
+.create-player {
+    top: 35%;
+    left: 50%;
+  }
+
+.create-player__inputs{
+    padding: 10px;
+}

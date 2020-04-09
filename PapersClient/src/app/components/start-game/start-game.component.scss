@@ -1,0 +1,11 @@
+@import '../../styles/mixins';
+@import '../../styles/global';
+
+.start-game {
+    top: 35%;
+    left: 50%;
+  }
+
+.start-game__inputs{
+    padding: 10px;
+}
