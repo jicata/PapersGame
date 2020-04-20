@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Papers.Data;
 
 namespace Papers.Migrations
 {
     [DbContext(typeof(PapersDbContext))]
-    partial class PapersDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200420165917_InitialDomainModel")]
+    partial class InitialDomainModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -13,5 +13,9 @@
         }
 
         public DbSet<Paper> Papers { get; set; }
+
+        public DbSet<Player> Players { get; set; }
+
+        public DbSet<GameSession> GameSessions { get; set; }
     }
 }

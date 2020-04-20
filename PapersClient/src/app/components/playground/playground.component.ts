@@ -20,7 +20,7 @@ export class PlaygroundComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.playgroundCommunicationService.subscribeToBroadCastGameSession(
+    this.playgroundCommunicationService.subscribeToBroadcastGameSession(
       this.updateGroup.bind(this)
     );
   }

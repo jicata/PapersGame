@@ -13,7 +13,7 @@ import { RxReactiveFormsModule } from '@rxweb/reactive-form-validators';
 import { PlaygroundComponent } from './components/playground/playground.component';
 import { PlayerComponent } from './components/player/player.component';
 import { CreatePlayerComponent } from './components/create-player/create-player.component';
-import { StartGameComponent } from './components/start-game/start-game.component';
+import { GameSessionComponent } from './components/game-session/game-session.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,7 @@ import { StartGameComponent } from './components/start-game/start-game.component
     PlaygroundComponent,
     PlayerComponent,
     CreatePlayerComponent,
-    StartGameComponent
+    GameSessionComponent
   ],
   imports: [
     HttpClientModule,

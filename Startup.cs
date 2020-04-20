@@ -48,14 +48,15 @@ namespace Papers
 
             services.AddControllers();
 
+            //TODO: improve QC
             var definedTypes = Assembly.GetExecutingAssembly().DefinedTypes;
             var serviceInterfaces = definedTypes
                 .Where(c => c.IsInterface && c.ImplementedInterfaces.Contains(typeof(IService))).ToList();
 
             foreach (var serviceInterface in serviceInterfaces)
             {
-                var concreteType = definedTypes.FirstOrDefault(c => c.IsClass && c.Name == serviceInterfaces.FirstOrDefault().Name.Substring(1));
-                services.AddSingleton(serviceInterface, concreteType);
+                var concreteType = definedTypes.FirstOrDefault(c => c.IsClass && c.Name == serviceInterface.Name.Substring(1));
+                services.AddTransient(serviceInterface, concreteType);
             }
 
         }

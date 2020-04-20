@@ -5,14 +5,12 @@
     using System.Threading.Tasks;
 
     using Microsoft.AspNetCore.Mvc;
+
     using Papers.Data;
     using Papers.DTOs;
     using Papers.Models;
 
-    [ApiController]
-    [Route("api/[controller]")]
-    [Produces("application/json")]
-    public class PapersController : ControllerBase
+    public class PapersController : ApiController
     {
         private readonly PapersDbContext db;
 
@@ -20,8 +18,7 @@
         {
             this.db = db;
         }
-
-        // GET: api/BlogPosts
+        
         [HttpGet]
         public async Task<IActionResult> GetPapers()
         {

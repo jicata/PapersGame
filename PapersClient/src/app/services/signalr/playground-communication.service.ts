@@ -14,14 +14,8 @@ export class PlaygroundCommunicationService extends BaseSignalRService {
     return this.invoke(SIGNALR.PLAYGROUND.METHODS.JOIN_OR_CREATE, gameSessionId);
   }
 
-  subscribeToBroadCastGameSession(action) {
+  subscribeToBroadcastGameSession(action) {
     this.hubConnection.on(SIGNALR.PLAYGROUND.METHODS.UPDATE_GAME_SESSION, (msg) => {
-      action(msg);
-    });
-  }
-
-  subscribeToPlayerLimitReached(action){
-    this.hubConnection.on(SIGNALR.PLAYGROUND.METHODS.PLAYER_LIMIT_REACHED, (msg) => {
       action(msg);
     });
   }
